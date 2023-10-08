@@ -8,7 +8,7 @@ const loadMoreBtn = document.querySelector('button.load-more');
 
 form.addEventListener('submit', onSubmit);
 loadMoreBtn.addEventListener('click', onLoadMore);
-// let queriesArray = [];
+
 
 function onSubmit(e) {
   e.preventDefault();
@@ -32,9 +32,7 @@ function onSubmit(e) {
           renderImages(queriesArray);
           loadMoreBtn.classList.add('is-hidden');
           Notify.success(`Hooray! We found ${data.totalHits} images.`);
-          // Notify.info(
-          //   "We're sorry, but you've reached the end of search results."
-          // );
+         
         } else {
           renderImages(queriesArray);
           Notify.success(`Hooray! We found ${data.totalHits} images.`);
